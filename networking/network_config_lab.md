@@ -1,5 +1,5 @@
 
-# Network Configuration & Tesing Lab
+# Network Configuration & Testing Lab
 
 **Author:** Stevanie Echevarria
 **System:** Ubuntu (VirtualBox VM)
