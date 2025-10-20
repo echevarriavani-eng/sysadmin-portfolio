@@ -1,0 +1,7 @@
+==================================================
+   SYSTEM HEALTH CHECK REPORT
+==================================================
+
+Hostname      : thelaughingman-VirtualBox
+Uptime        : up 1 day, 2 hours, 24 minutes
+
