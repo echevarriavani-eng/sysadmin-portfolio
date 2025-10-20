@@ -48,3 +48,16 @@ This means files are created as rw-rw-r-- and directories as rwxrwxr-x
 This lab helped me understand how file permissions, ownership, and umask values affect access control in Linux.
 I gained hands-on experience with critical commands I'll use daily as a sysAdmin.
 
+
+---
+
+
+## Observed Output 
+
+| File | Permission Summary | Description |
+|------|--------------------|---------------|
+| `file1.txt` | `-rw-r--r--` | Standard user file owned by arys |
+| `file2.txt` | `-rw-rw-r--` | Group-writable file |
+| `shared_dir` | `drwxrwxrwt` | Sticky bit enabled shared directory |
+
+**Result:** Permissions successfully applied and verified via `ls -l` output.
