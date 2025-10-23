@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Upgrading Ubuntu Server to Version 22.04 (Jammy Jellyfish)
 **Created by:** Stevanie Echevarria
 **Date:** October 22, 2025 – 21:18:07
@@ -78,5 +79,4 @@ sudo reboot
 ## Status
 
 Completed Successfully!
-Write what you learned from this lab.
 
