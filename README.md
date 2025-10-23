@@ -1,78 +1,82 @@
-# sysadmin-portfolio
-**Linux System Administration Labs by Stevanie Echevarria**
-**Date:** October 17, 2025
-** System:** Ubuntu (VirtualBox VM)
-**Repository:** [sysadmin-portfolio](https://github.com/echevarriavani-eng/sysadmin-portfolio)
-
+<<<<<<< HEAD
+# Upgrading Ubuntu Server to Version 22.04 (Jammy Jellyfish)
+**Created by:** Stevanie Echevarria
+**Date:** October 22, 2025 – 21:18:07
+**System:**  Ubuntu 22.04.5 LTS
 
 ---
-
 
 ## Objective
-This repository documents my **hands-on Linux Administration labs** as part of my training toward becoming a professional **System Adiminstrator / Engineer**.
-Each lab demonstrates practical command-line experience with **user management**, **permissions**, and **security fundamentals** in a Linux environment.
+Perform a full upgrade of Ubuntu Server from **20.04 LTS (Focal Fossa)**, confirm new kernal installation, clean the environment, and verify a successful boot.
+
+## Commands Used
+```bash
+# Verify current version
+lsb_release -a
+
+# Udate and upgrade all packages
+sudo apt update && sudo apt upgrade -y
+sudo apt dist-upgrade -y
+
+# Clean up unused packages
+sudo apt autoremove -y
+sudo apt clean
+
+# Verify kernel and OS version
+uname -r
+lsb_release -a
+
+#Reboot to load the new kernel
+sudo reboot
 
 
----
+```
+## Summary
 
-## Labs Completed
+- Removed obsolete and deprecated packages
 
-### Lab 1: Users, Groups, and ACL Permissions
-**Focus** Creating and managing Linux users, groups, and Access Controll Lists 
-(ACLs).
-**Key Skills:**
-- Added and removed users
-- Created and managed groups 
-- Applied ACLs for fine-grained file permissions
-[View Report  Lab1_report.md] (./Lab1_Report.md)
+- Cleaned local apt cache
+
+- Verified updated repositories and package list
+
+- System rebooted successfully and running on new kernel
 
 
----
+## Notes
+
+- The os-prober warning is expected for Ubuntu 22.04 and doesn't affect boot functionality unless dual-booting
+
+ 
+## Technical Takeaways
+
+- I learned how distribution upgrades replace old kernels, rebuild GRUB configurations, and handle, dependency updates automatically.
+
+- I understand the difference between apt upgrade, apt dist-upgrade, and do-release-upgrade -- each serving a different purpose in maintaining and transitioning system packages.
+
+- I bacame more comfortable reading terminal feedback and identifying unexpected warnings versus critical errors.
+
+- Mananging updates via CLI taught me how to critical package integrity and kernal verification are for maintaining uptime.
+
+## Troubleshooting Lessons
+
+- Encountering path errors (caused by parenthesese in folder names) helped me pratice debugging issues in Bash and reinforced why naming conventions matter in scripting.
+
+- I learned to use wildcards (*Jammy*) and escape characters to safely navigate paths in Linux - a small but essential SysAdmin skill.
+
+- I saw firsthand how small syntax details (spaces, quotes, parenthesese) canbreak automation scripts, which pushed me to improve my shell scripting habits.
+
+## Reflection
+
+- This lab reinforced my confidence in working directly inside the terminal and trusting my process, even when small frustrations appeared.
+
+- I recognized that true systemswork is about methodical problem-solving, not rushing to solutions.
+
+- Each issue i solved - from permissionsto folder naming - strenthened my resolve for automation, precision, patience, which are key in bot system administration and scripting.
+
+- Overall I have grow a passion for treating the terminal as a workspace oc control - where i build, fix, and refine systems.
 
 
-### Lab 2: File Permissions and Ownership
-**Focus:** Understanding and applying Linux file permissions and ownership models.
-**Key Skills:**
-- Used `chmod` , `chown` , and `chgrp` , to control access
-- Practices ownership transfer between users and groups
-[View Report Lab2_FilePermissions/Lab2_Report.md](./Lab2_FilePermissions/Lab2_FilePermission/Lab2_Report.md)
+## Status
 
+Completed Successfully!
 
-
----
-
-
-### Lab 3: Advanced File Permikssions and Sticky Bit
-**Focus:** Using numeric and symbolic permission modes, and configuring the sticky bit.
-**Key Skills**
-- Compared symbolic vs numeric modes
-- Applied special permissions for shared directories
-- Verified permissions using `ls -l`
-[View Report  Lab3_AdvancedPermissions/Lab3_Report.md](./Lab3_AdvancedPermissions/Lab3_Report.md)
-
-
-
----
-
-
-## Skills Demonstrated
-- Linux CLI proficiency (Ubuntu)
-- User and Group Administration
-- File and Directory Permissions  
-- Access Control Lists (ACLs)
-- Special Permissions (SUID, SGID, Sticky Bit)
-- Git and GitHub version control
-
-
----
-
-
-## Next Steps
-- Continue documenting advanced labs (Networking, Package Management, Cron Jobs, and Backup Automation).
-- Expand portfolio with real-world system-configuration projects.
-- Pursue certifications: **CompTIA Linux+**, **LFCS**, **AWS Administrator Associate**.
-
-
----
-
-### " Every command is one more step closer to mastery."
