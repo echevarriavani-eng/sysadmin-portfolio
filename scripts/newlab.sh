@@ -14,7 +14,7 @@ cd "$LABDIR"
 # Create Markdown report with header
 cat <<EOF > README.md
 # $LABNAME
-**Created by:** Empress Arys
+**Created by:** Stevanie Echevarria
 **Date:** $(date '+%B %d, %Y – %H:%M:%S')
 **System:** $(hostnamectl | grep "Operating System" | cut -d: -f2)
 
